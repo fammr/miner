@@ -1,0 +1,37 @@
+{
+  "appName": "miner",
+  "threadPoolSize": 10,
+  "canal": {
+    "ip": "10.168.29.215",
+    "port": 11111,
+    "user": "",
+    "password": ""
+  },
+  "dataSource": {
+    "xxx": {
+      "driverClass": "com.mysql.jdbc.Driver",
+      "url": "jdbc:mysql://xxx:3306/xxx?useUnicode=true&characterEncoding=utf-8&useSSL=false",
+      "username": "xxx",
+      "password": "xxx"
+    }
+  },
+  "jobs": [
+    {
+      "className": "com.hebaibai.miner.job.TableSyncJob",
+      "dataSource": "xxx",
+      "prop": {
+        "database": "pay",
+        "table": "p_pay_msg",
+        "target": "member",
+        "mapping": {
+          "id": "id",
+          "mch_code": "mCode",
+          "send_type": "mName",
+          "order_id": "phone",
+          "created_time": "create_time",
+          "creator": "remark"
+        }
+      }
+    }
+  ]
+}
