@@ -6,6 +6,15 @@
 1. 数据库开启binlog，binlog_format=ROW
 2. 下载并运行Canal
 3. Canal地址：https://github.com/alibaba/canal
+4. Canal配置修改：
+```
+1：文件：canal.properties
+canal.destinations = miner
+2：文件：instance.properties
+canal.instance.master.address=数据库ip:端口
+canal.instance.dbUsername=数据库账号
+canal.instance.dbPassword=数据库密码
+```
 
 ### 使用：
 1. 下载项目
